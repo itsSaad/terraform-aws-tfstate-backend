@@ -93,6 +93,10 @@ variable "enable_server_side_encryption" {
   description = "Enable DynamoDB server-side encryption"
   default     = "true"
 }
+variable "s3_server_side_encryption_type" {
+  description = "Type of Encryption to use for S3 Bucket Policy and Restrict Object Uploads"
+  default = "AES256"
+}
 
 variable "block_public_acls" {
   description = "Whether Amazon S3 should block public ACLs for this bucket."

@@ -50,7 +50,7 @@ data "aws_iam_policy_document" "prevent_unencrypted_uploads" {
       variable = "s3:x-amz-server-side-encryption"
 
       values = [
-        "AES256",
+        "${var.s3_server_side_encryption_type}",
       ]
     }
   }
